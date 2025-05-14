@@ -1,5 +1,7 @@
 package com.example.bincard.di
 
+import androidx.room.Room
+import com.example.bincard.history.data.db.CardInfoDataBase
 import com.example.bincard.search.data.network.NetworkClient
 import com.example.bincard.search.data.network.RetrofitNetworkClient
 import com.example.bincard.search.data.network.SearchBin
@@ -31,5 +33,9 @@ val dataModule = module {
     }
     single<NetworkClient> {
         RetrofitNetworkClient(get(), get())
+    }
+    single {
+        Room.databaseBuilder(get(), CardInfoDataBase::class.java, "cardInfoDataBase.db")
+            .build()
     }
 }

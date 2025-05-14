@@ -1,25 +1,22 @@
 package com.example.bincard.search.presentation
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.bincard.history.domain.api.CardInfoInteractor
 import com.example.bincard.search.domain.api.SearchBinInteractor
 import com.example.bincard.search.presentation.mapper.CardInfoMapper
 import com.example.bincard.search.presentation.model.CardInfoState
+import com.example.bincard.search.presentation.model.CardInformationUI
 import kotlinx.coroutines.launch
 
 class SearchViewModel(
     private val searchBinInteractor: SearchBinInteractor,
+    private val cardInfoInteractor: CardInfoInteractor
 ) : ViewModel() {
-
-//    private val _text = MutableLiveData<String>().apply {
-//        value = "This is dashboard Fragment"
-//    }
-//    val text: LiveData<String> = _text
-
     private val cardInfoLiveData = MutableLiveData<CardInfoState>()
-    fun observeSearchState(): MutableLiveData<CardInfoState> = cardInfoLiveData
-
+    fun observeSearchState(): LiveData<CardInfoState> = cardInfoLiveData
     fun searchBin(bin: String) {
         renderState(CardInfoState.Loading)
         viewModelScope.launch {
@@ -41,5 +38,11 @@ class SearchViewModel(
 
     private fun renderState(state: CardInfoState) {
         cardInfoLiveData.postValue(state)
+    }
+
+    fun saveData(data: CardInformationUI) {
+        viewModelScope.launch {
+            cardInfoInteractor.addCardInfo(CardInfoMapper.map(data))
+        }
     }
 }

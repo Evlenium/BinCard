@@ -15,4 +15,16 @@ object CardInfoMapper {
             bankCity = cardInformation.bankCity,
         )
     }
+
+    fun map(cardInformation: CardInformationUI): CardInformation {
+        return CardInformation(
+            country = cardInformation.country,
+            coordinate = cardInformation.coordinate,
+            cardType = cardInformation.cardType,
+            bankURL = cardInformation.bankURL,
+            bankPhone = cardInformation.bankPhone,
+            baskSite = cardInformation.baskSite,
+            bankCity = cardInformation.bankCity,
+        )
+    }
 }

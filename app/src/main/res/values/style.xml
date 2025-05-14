@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ButtonKeyboardStyle">
+        <item name="android:layout_width">@dimen/dimens_size_0</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">@dimen/dimens_size_4</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_18</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/medium</item>x
+    </style>
+
+    <style name="TextInfoConstFragmentStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/text_size_18</item>
+        <item name="android:layout_margin">@dimen/dimens_size_8</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/medium</item>
+        <item name="android:backgroundTint">@color/white</item>
+    </style>
+
+    <style name="TextInfoFragmentStyle">
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/text_size_18</item>
+        <item name="android:layout_margin">@dimen/dimens_size_8</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:fontFamily">@font/medium</item>
+        <item name="android:backgroundTint">@color/white</item>
+    </style>
+</resources>
