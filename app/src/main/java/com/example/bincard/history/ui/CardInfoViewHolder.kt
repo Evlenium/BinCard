@@ -14,6 +14,7 @@ class CardInfoViewHolder(
     fun bindPosition(position: Int) {
         if (cardInfoList.isNotEmpty()) {
             with(binding) {
+                textViewBin.text = "${cardInfoList[position].cardBin}"
                 textViewCountry.text = cardInfoList[position].country
                 textViewCoordinate.text = cardInfoList[position].coordinate
                 textViewCardType.text = cardInfoList[position].cardType
