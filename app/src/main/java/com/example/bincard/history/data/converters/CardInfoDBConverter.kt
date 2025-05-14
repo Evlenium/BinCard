@@ -6,6 +6,7 @@ import com.example.bincard.search.domain.model.CardInformation
 class CardInfoDBConverter {
     fun map(cardInfoEntity: CardInfoEntity): CardInformation {
         return CardInformation(
+            cardBin = cardInfoEntity.cardBin,
             country = cardInfoEntity.country,
             coordinate = cardInfoEntity.coordinate,
             cardType = cardInfoEntity.cardType,
@@ -18,7 +19,7 @@ class CardInfoDBConverter {
 
     fun map(cardInformation: CardInformation): CardInfoEntity {
         return CardInfoEntity(
-            cardBin = 0,
+            cardBin = cardInformation.cardBin,
             country = cardInformation.country,
             coordinate = cardInformation.coordinate,
             cardType = cardInformation.cardType,

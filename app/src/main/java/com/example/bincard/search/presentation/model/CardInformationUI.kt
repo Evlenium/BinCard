@@ -1,6 +1,7 @@
 package com.example.bincard.search.presentation.model
 
 data class CardInformationUI(
+    val cardBin: Long,
     val country: String,
     val coordinate: String,
     val cardType: String,

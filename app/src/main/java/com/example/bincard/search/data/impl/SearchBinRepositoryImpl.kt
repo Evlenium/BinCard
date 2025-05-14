@@ -15,7 +15,9 @@ class SearchBinRepositoryImpl(
     private val client: NetworkClient,
     private val resourceProvider: ResourceProvider,
 ) : SearchBinRepository {
+    private var cardBinNumber = ""
     override suspend fun searchBin(bin: String): Flow<Resource<CardInformation>> = flow {
+        cardBinNumber = bin
         val response = client.doBinRequest(SearchRequest(bin))
         when (response.result) {
             Constants.SUCCESS -> emit(handleSuccessResponse(response as SearchBinResponse))
@@ -39,6 +41,7 @@ class SearchBinRepositoryImpl(
             "${response.country?.latitude}:${response.country?.longitude}"
         }
         return CardInformation(
+            cardBin = cardBinNumber.toLong(),
             country = response.country?.name ?: resourceProvider.getErrorUnknown(),
             coordinate = coordinate,
             cardType = response.type ?: resourceProvider.getErrorUnknown(),

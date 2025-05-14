@@ -9,10 +9,10 @@ import com.example.bincard.history.data.db.entity.CardInfoEntity
 
 @Dao
 interface CardInfoDao {
-    @Insert(entity = CardInfoEntity::class, OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertCardInfo(cardInfoEntity: CardInfoEntity)
 
-    @Delete(entity = CardInfoEntity::class)
+    @Delete
     suspend fun deleteCardInfo(cardInfoEntity: CardInfoEntity)
 
     @Query("SELECT * FROM card_info_table")

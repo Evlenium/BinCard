@@ -73,7 +73,6 @@ class HistoryFragment : Fragment() {
             }
             .setPositiveButton(R.string.yes) { dialog, which ->
                 historyViewModel.deleteCardInfo(card)
-                historyViewModel.fillDataCardInfo()
             }
             .show()
     }

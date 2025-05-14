@@ -33,6 +33,10 @@ class RootActivity : AppCompatActivity() {
                 R.id.navigation_search -> {
                     binding.navView.isVisible = true
                 }
+
+                R.id.navigation_info -> {
+                    binding.navView.isVisible = false
+                }
             }
         }
     }

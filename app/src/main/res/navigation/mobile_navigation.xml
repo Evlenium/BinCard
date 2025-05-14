@@ -18,10 +18,10 @@
         tools:layout="@layout/fragment_search">
         <action
             android:id="@+id/action_navigation_search_to_infoFragment"
-            app:destination="@id/infoFragment" />
+            app:destination="@id/navigation_info" />
     </fragment>
     <fragment
-        android:id="@+id/infoFragment"
+        android:id="@+id/navigation_info"
         android:name="com.example.bincard.info.ui.InfoFragment"
         android:label="@string/title_info"
         tools:layout="@layout/fragment_info" />

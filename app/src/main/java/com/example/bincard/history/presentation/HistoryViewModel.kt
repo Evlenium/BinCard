@@ -39,6 +39,9 @@ class HistoryViewModel(private val cardInfoInteractor: CardInfoInteractor) : Vie
     }
 
     fun deleteCardInfo(cardInformationUI: CardInformationUI) {
-        viewModelScope.launch { cardInfoInteractor.deleteCardInfo(CardInfoMapper.map(cardInformationUI)) }
+        viewModelScope.launch {
+            cardInfoInteractor.deleteCardInfo(CardInfoMapper.map(cardInformationUI))
+            fillDataCardInfo()
+        }
     }
 }
