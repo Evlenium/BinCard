@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textViewBin"
+        style="@style/TextInfoConstFragmentStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewConstCountry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="55743212" />
+
+    <TextView
+        android:id="@+id/textViewConstCountry"
+        style="@style/TextInfoConstFragmentStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/country"
+        app:layout_constraintBottom_toTopOf="@+id/textViewConstCoordinate"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewConstCoordinate"
+        style="@style/TextInfoConstFragmentStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/coordinate"
+        app:layout_constraintBottom_toTopOf="@+id/textViewConstType"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewConstType"
+        style="@style/TextInfoConstFragmentStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/card_type"
+        app:layout_constraintBottom_toTopOf="@+id/textViewConstBankURL"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewConstBankURL"
+        style="@style/TextInfoConstFragmentStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bank_url"
+        app:layout_constraintBottom_toTopOf="@+id/textViewConstBankPhone"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewConstBankPhone"
+        style="@style/TextInfoConstFragmentStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bank_phone"
+        app:layout_constraintBottom_toTopOf="@+id/textViewConstBankSite"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewConstBankSite"
+        style="@style/TextInfoConstFragmentStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bask_site"
+        app:layout_constraintBottom_toTopOf="@+id/textViewConstBankCity"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewConstBankCity"
+        style="@style/TextInfoConstFragmentStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bank_city"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewCountry"
+        style="@style/TextInfoFragmentStyle"
+        android:layout_width="@dimen/dimens_size_0"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewConstCountry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textViewConstCountry"
+        app:layout_constraintTop_toTopOf="@+id/textViewConstCountry"
+        tools:text="Россия" />
+
+    <TextView
+        android:id="@+id/textViewCoordinate"
+        style="@style/TextInfoFragmentStyle"
+        android:layout_width="@dimen/dimens_size_0"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewConstCoordinate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textViewConstCountry"
+        app:layout_constraintTop_toTopOf="@+id/textViewConstCoordinate"
+        tools:text="RU" />
+
+    <TextView
+        android:id="@+id/textViewCardType"
+        style="@style/TextInfoFragmentStyle"
+        android:layout_width="@dimen/dimens_size_0"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewConstType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textViewConstType"
+        app:layout_constraintTop_toTopOf="@+id/textViewConstType"
+        tools:text="Debit" />
+
+    <TextView
+        android:id="@+id/textViewBankURL"
+        style="@style/TextInfoFragmentStyle"
+        android:layout_width="@dimen/dimens_size_0"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewConstBankURL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textViewConstBankURL"
+        app:layout_constraintTop_toTopOf="@+id/textViewConstBankURL"
+        tools:text="Alpha.ru" />
+
+    <TextView
+        android:id="@+id/textViewBankPhone"
+        style="@style/TextInfoFragmentStyle"
+        android:layout_width="@dimen/dimens_size_0"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewConstBankPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textViewConstBankPhone"
+        app:layout_constraintTop_toTopOf="@+id/textViewConstBankPhone"
+        tools:text="88005553535" />
+
+    <TextView
+        android:id="@+id/textViewBankSite"
+        style="@style/TextInfoFragmentStyle"
+        android:layout_width="@dimen/dimens_size_0"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/textViewConstBankCity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textViewConstBankPhone"
+        app:layout_constraintTop_toTopOf="@+id/textViewConstBankSite"
+        tools:text="site.com" />
+
+    <TextView
+        android:id="@+id/textViewBankCity"
+        style="@style/TextInfoFragmentStyle"
+        android:layout_width="@dimen/dimens_size_0"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textViewConstBankPhone"
+        app:layout_constraintTop_toTopOf="@+id/textViewConstBankCity"
+        tools:text="Москва" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_size_4"
+        android:background="@drawable/divider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,7 @@
 package com.example.bincard.di
 
+import com.example.bincard.history.data.impl.CardInfoRepositoryImpl
+import com.example.bincard.history.domain.api.CardInfoRepository
 import com.example.bincard.resources.data.ResourceProvider
 import com.example.bincard.search.data.impl.SearchBinRepositoryImpl
 import com.example.bincard.search.domain.api.SearchBinRepository
@@ -11,5 +13,8 @@ val repositoryModule = module {
     }
     single<SearchBinRepository> {
         SearchBinRepositoryImpl(get(), get())
+    }
+    single<CardInfoRepository> {
+        CardInfoRepositoryImpl(get(), get())
     }
 }

@@ -7,6 +7,7 @@ import com.example.bincard.search.data.dto.SearchRequest
 import com.example.bincard.util.Constants
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import retrofit2.HttpException
 import java.io.IOException
 
 class RetrofitNetworkClient(
@@ -36,6 +37,12 @@ class RetrofitNetworkClient(
             } catch (exceptionSearch: IOException) {
                 Log.e(SEARCH_EXCEPTION, "$exceptionSearch")
                 Response().apply { result = Constants.SERVER_ERROR }
+            } catch (httpException: HttpException) {
+                if (httpException.code() == Constants.TOO_MANY_REQUESTS) {
+                    Response().apply { result = Constants.TOO_MANY_REQUESTS }
+                } else {
+                    Response().apply { result = Constants.SERVER_ERROR }
+                }
             }
         }
     }
